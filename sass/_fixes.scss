@@ -1,0 +1,10 @@
+.img-width-fix {
+  width: clamp(10vw, 225px, 15vw);
+  height: auto;
+  object-fit: cover;
+}
+.img-card-fix {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+}

@@ -1,0 +1,22 @@
+$media-size-up:(
+    "mobile":"420px",
+    "tablet":"768px",
+    "laptop":"1366px",
+);
+$media-size-down:(
+    "mobile":"419px",
+    "tablet":"767px",
+    "laptop":"1365px",
+    "hd-display":"1920px"
+);
+
+@mixin break-down($size) {
+    @media  (max-width:map-get($media-size-down,$size)){
+        @content;
+    }
+}
+@mixin break-up($size) {
+    @media  (min-width:map-get($media-size-up,$size)){
+        @content;
+    }
+}

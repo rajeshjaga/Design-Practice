@@ -1,0 +1,78 @@
+//flexbox and grid
+.flex {
+  display: flex;
+  &-jc-sa {
+    justify-content: space-around;
+  }
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-se {
+    justify-content: space-evenly;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+  &-ai-st {
+    align-items: start;
+  }
+  &-as-c {
+    align-self: center;
+  }
+}
+.grid {
+  display: grid;
+  &-pi-c {
+    place-items: center;
+  }
+}
+
+//fonts
+.font-larger {
+  font-size: 4.5rem;
+}
+.font-large,
+%font-larger {
+  font-size: 3.9rem;
+}
+%font-large {
+  font-size: 2.5rem;
+}
+%font-med {
+  font-size: 1.75rem;
+}
+%font-nav {
+  font-size: 1.2rem;
+}
+%font-p {
+  font-size: 1.2rem;
+}
+%fw-600 {
+  font-weight: 600;
+}
+
+//colors
+.cl-blue,
+.cl-accent,
+%cl-accent {
+  color: rgb(41, 187, 255);
+  &-bg {
+    background-color: rgb(41, 187, 255);
+  }
+}
+.cl-aqua {
+  color: aquamarine;
+}
+.cl-aq-blue {
+  color: skyblue;
+}
+.size-100 {
+  height: 100vh;
+  width: 100vw;
+}
+%cl-grey {
+  color: #eee;
+}
+%cl-white {
+  color: #fff;
+}

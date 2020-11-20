@@ -1,0 +1,71 @@
+@use './helperclass';
+@use './media';
+.logo {
+  @extend %font-large;
+  @extend %cl-white;
+}
+nav {
+  @include media.break-down(tablet) {
+    .logo {
+      font-size: 1.5rem;
+    }
+    ul.nav-link {
+      display: none;
+    }
+  }
+}
+li a {
+  @extend %font-nav;
+  @extend %fw-600;
+  @extend %cl-grey;
+  margin-left: 1.5rem;
+}
+button,
+.btn a {
+  @extend %cl-accent-bg;
+  @extend %font-med;
+  @extend %fw-600;
+  border-radius: 12px;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1.75rem;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.23s ease-in;
+  &:hover {
+    transform: scale(1.05);
+    svg {
+      height: 28px;
+      width: 28px;
+      visibility: visible;
+      vertical-align: middle;
+      transition: all 0.3s ease-out;
+    }
+  }
+  svg {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    vertical-align: middle;
+    transition: all 0.3s ease-out;
+  }
+}
+.btn {
+  @include media.break-down(mobile) {
+    font-size: 1.5rem;
+  }
+}
+
+section {
+  height: 90vh;
+  .hero {
+    width: 85%;
+    h1 {
+      color: #fff;
+      margin-bottom: 3rem;
+      @include media.break-down(mobile) {
+        font-size: 2.75rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  font-size: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+button,
+.btn,
+a {
+  text-transform: capitalize;
+}
+
+img {
+  object-fit: cover;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sa {
+  justify-content: space-around;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-se {
+  justify-content: space-evenly;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-ai-st {
+  align-items: start;
+}
+.flex-as-c {
+  align-self: center;
+}
+
+.grid {
+  display: grid;
+}
+.grid-pi-c {
+  place-items: center;
+}
+
+.font-larger {
+  font-size: 4.5rem;
+}
+
+.font-large {
+  font-size: 3.9rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+}
+
+button,
+.btn a {
+  font-size: 1.75rem;
+}
+
+li a {
+  font-size: 1.2rem;
+}
+
+li a, button,
+.btn a {
+  font-weight: 600;
+}
+
+.cl-blue,
+.cl-accent {
+  color: #29bbff;
+}
+.cl-blue-bg,
+.cl-accent-bg,
+button,
+.btn a {
+  background-color: #29bbff;
+}
+
+.cl-aqua {
+  color: aquamarine;
+}
+
+.cl-aq-blue {
+  color: skyblue;
+}
+
+.size-100 {
+  height: 100vh;
+  width: 100vw;
+}
+
+li a {
+  color: #eee;
+}
+
+.logo {
+  color: #fff;
+}
+
+.bg-img {
+  position: fixed;
+  object-position: 100% 25%;
+  z-index: -2;
+  filter: brightness(20%);
+}
+
+main:nth-of-type(1) {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+main:nth-of-type(2) {
+  min-height: 100vh;
+  background: #000;
+  padding-top: 2rem;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+
+.container-half {
+  position: relative;
+}
+.container-half:after {
+  content: "";
+  height: 100%;
+  width: 70%;
+  border: 2px solid aquamarine;
+  z-index: 0;
+  position: absolute;
+  top: 5%;
+  left: 2.5%;
+  border-radius: 5px;
+  display: block;
+}
+.container-half .main-container {
+  position: relative;
+  z-index: 10;
+}
+.container-half .main-container img {
+  height: auto;
+  border-radius: 5px;
+  width: 70%;
+}
+.container-half .main-container .description {
+  position: absolute;
+  bottom: -25%;
+  right: -10%;
+  border-radius: 5px;
+  width: 80%;
+  background: #1c1c1c;
+  padding: 1rem 2rem;
+}
+.container-half .main-container .description h1 {
+  padding-bottom: 0.5rem;
+}
+.container-half .main-container .description p {
+  text-align: justify;
+  color: #999999;
+}
+
+.container-half.inverted {
+  margin-left: auto;
+}
+.container-half.inverted:after {
+  top: 5%;
+  left: -5%;
+  border-color: skyblue;
+}
+.container-half.inverted .description {
+  right: 50%;
+}
+
+.card-section {
+  padding-bottom: 15rem;
+}
+
+footer {
+  padding: 3rem 0;
+  background: #2d2d2d;
+}
+footer h1 {
+  color: #eee;
+  margin-bottom: 1.2rem;
+}
+footer a.link {
+  color: #47bbe9;
+  font-size: 1rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+p.address {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #eee;
+  margin-bottom: 1rem;
+}
+p.address:nth-of-type(3) {
+  width: 75%;
+}
+
+.sm-pad {
+  padding: 1.5vh 0;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.full-wid {
+  width: 100%;
+}
+
+.mar-center,
+.container-band,
+.container {
+  margin: 0 auto;
+}
+
+.container {
+  width: 80%;
+}
+.container-band {
+  width: fit-content;
+}
+.container-half {
+  width: 50%;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mt-7 {
+  margin-top: 7rem;
+}
+
+.img-width-fix {
+  width: clamp(10vw, 225px, 15vw);
+  height: auto;
+  object-fit: cover;
+}
+
+.img-card-fix {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  nav .logo {
+    font-size: 1.5rem;
+  }
+  nav ul.nav-link {
+    display: none;
+  }
+}
+
+li a {
+  margin-left: 1.5rem;
+}
+
+button,
+.btn a {
+  border-radius: 12px;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1.75rem;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.23s ease-in;
+}
+button:hover,
+.btn a:hover {
+  transform: scale(1.05);
+}
+button:hover svg,
+.btn a:hover svg {
+  height: 28px;
+  width: 28px;
+  visibility: visible;
+  vertical-align: middle;
+  transition: all 0.3s ease-out;
+}
+button svg,
+.btn a svg {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  vertical-align: middle;
+  transition: all 0.3s ease-out;
+}
+
+@media (max-width: 419px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+section {
+  height: 90vh;
+}
+section .hero {
+  width: 85%;
+}
+section .hero h1 {
+  color: #fff;
+  margin-bottom: 3rem;
+}
+@media (max-width: 419px) {
+  section .hero h1 {
+    font-size: 2.75rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

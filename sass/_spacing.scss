@@ -1,0 +1,33 @@
+.sm-pad {
+  padding: 1.5vh 0;
+}
+.center-text {
+  text-align: center;
+}
+.full-wid {
+  width: 100%;
+}
+.mar-center,
+%mar-center {
+  margin: 0 auto;
+}
+.container {
+  width: 80%;
+  @extend %mar-center;
+  &-band {
+    width: fit-content;
+    @extend %mar-center;
+  }
+  &-half {
+    width: 50%;
+  }
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mt-5 {
+  margin-top: 5rem;
+}
+.mt-7 {
+  margin-top: 7rem;
+}
